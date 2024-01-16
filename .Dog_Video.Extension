@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <title>German Shepherd Dogs Video </title>
+   <meta charset="utf8">
+</head>
+
+<body>
+   <nav>
+      <a href="Assignment.html">Home</a><br>
+      <a href="Dog.html">Shepherd dog Image</a><br>
+      <a href="Dog_video.html">Shepherd dogs Video</a>
+  </nav>
+  
+  <h1>The German Shepherd Dogs Webpage</h1>
+  <p>Meet The German Shepherd DogS Video: <a href="https://www.youtube.com/embed/Y5hyp_ZAdbo">link</a></p> 
+   </body>
+   
+</html>
