@@ -20,7 +20,7 @@ h1, p {
 /*SELECT ALL SQUARES IN THE ARRAY*/
 
 .container .squares :nth-child(-n+4) {
-    background-image: url("../images/icons/smileyface1-2.png");
+    background-image: url("../CSS/images/smileyface1-2.png");
 
     color:#fff;
     float:left;
@@ -64,7 +64,7 @@ background: #4240ff;
 /* HOVER. TRANSLATE & TRANSFORM EFFECTS */
 
 .container .squares:nth-child(-n+4) :hover {
-    background-image: url("../images/icons/smileyface1.png");
+    background-image: url("../CSS/Images/smileyface1-2.png");
     transform: scale(.5);
     animation-name: race;
     animation-duration: 2.5s;
@@ -89,7 +89,7 @@ background: #4240ff;
 @keyframes race {
     0%, 100% {
         transform: translateY(0px);
-        background-image: url("../images/icons/smileyface1-2.png")
+        background-image: url("../CSS/images/smileyface1-2.png")
     }
     50% {
         transform: translateY(300px);
