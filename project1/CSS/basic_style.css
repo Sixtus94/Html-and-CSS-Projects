@@ -1,10 +1,10 @@
-/*-basic_css_style_css_part_1_code_snipet*/
+*-basic_css_style_css_part_1_code_snipet*/
 
 body {
     background-color: #fff;
 }
 
-h1, p {
+h1, h2, h3, p {
     color:rgba (8, 141, 165, 1);
     margin-left:100px;
     text-shadow: 1px  .5px 4px rgb(0,0,0,0.6);
@@ -19,8 +19,8 @@ h1, p {
 
 /*SELECT ALL SQUARES IN THE ARRAY*/
 
-.container .squares :nth-child(-n+4) {
-    background-image: url("../CSS/images/smileyface1-2.png");
+.container .squares:nth-child(-n+4) {
+    background-image: url("../images/icons/smileyface1-2.png");
 
     color:#fff;
     float:left;
@@ -37,13 +37,14 @@ h1, p {
 /*BASIC CSS PART 3-A*/
 /*SELECT ALL SQUARES PARAGRAPH IN THE ARRAY*/
 
-.squares:nth-child(-n+4) p {
+.container #id p {
 font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
 font-size: 1.5em;
 font-weight: 900;
 text-align: center;
 margin: 0;
 text-shadow: 2px 1px 4px rgba(0, 0, 0, 0.8);
+
 }
 
 /*INDIVIDUALLY SELECT ALL SQUARE IN THE ARRAY */
@@ -63,8 +64,8 @@ background: #4240ff;
 
 /* HOVER. TRANSLATE & TRANSFORM EFFECTS */
 
-.container .squares:nth-child(-n+4) :hover {
-    background-image: url("../CSS/Images/smileyface1-2.png");
+.container #id:nth-child(-n+4) :hover {
+    background-image: url("../images/icons/smileyface1-2.png");
     transform: scale(.5);
     animation-name: race;
     animation-duration: 2.5s;
@@ -89,7 +90,7 @@ background: #4240ff;
 @keyframes race {
     0%, 100% {
         transform: translateY(0px);
-        background-image: url("../CSS/images/smileyface1-2.png")
+        background-image: url("../images/icons/smileyface1-2.png)";
     }
     50% {
         transform: translateY(300px);

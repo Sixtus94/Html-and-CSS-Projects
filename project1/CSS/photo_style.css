@@ -1,14 +1,21 @@
-
-/*Effecting Images with css1-B*/
+/*----MENU SECTION ANIMATION ----*/
+.menu {
+    color: #f00;
+    font: bold 12px/18px sans-serif;
+    text-align: center;
+    display: inline;
+    margin: 0% auto;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
 
 /*GALLERY SECTION ANIMATION */
-
 p {
     font-weight: 300;
     line-height: 30px;
     padding-bottom: 15px;
 }
-
 .photo {
     position: relative;
     line-height: 0%;
