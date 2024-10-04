@@ -1,0 +1,360 @@
+
+ /* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+ .flip-box {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-box-inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-box-front, .flip-box-back {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-box-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  /* Style the back side */
+  .flip-box-back {
+    background-color: #334557;
+    color: #edc3c3;
+    transform: rotateY(180deg);
+  }
+  
+  /*--center an Image --*/
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .filter-img {
+    filter: grayscale(100%);
+  }
+
+  center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+  #round {
+    border: 2px solid red;
+    padding: 10px;
+    border-radius: 30px 30px 30px 30px;
+  }
+
+  /*-- HTML FOOTER  TAG--*/
+  footer {
+    text-align: center;
+    padding: 3px;
+    background-color: #562817;
+    color: white;
+  }
+
+    /*-- END HTML FOOTER TAG---*/
+
+   /*--CSS text align property --*/
+
+    div.a, h1, p {
+      text-align: center;
+    }
+    
+    div.b {
+      text-align: left;
+    }
+    
+    div.c {
+      text-align: right;
+    } 
+    
+    div.d {
+      text-align: justify;
+    } 
+     /*---End Css text align property--*/
+
+     /*--CSS Font Weight Property--*/
+
+    p.normal {
+      font-weight: normal;
+    }
+    
+    p.light {
+      font-weight: lighter;
+    }
+    
+    p.thick {
+      font-weight: bold;
+    }
+    
+    p.thicker {
+      font-weight: 900;
+    }
+   /*--End Font weight property--*/
+
+           /*--Challenge 5-3--*/
+   /*-- CSS Table Cell--*/
+   table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+  }
+  
+  td, th {
+    border: 1px solid #be9393;
+    text-align: center;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+  }
+  th {
+    background-color: #f4d6d6;
+  }
+  tr  :hover {
+     background-color: #f9af94;
+  }
+  
+  tr:nth-child(even) {
+    background-color: ;
+  }
+  h2, p {
+    text-align: center;
+  }
+   /*--End CSS Table Cell-- */
+
+/*--Challenge 5-4 --*/
+
+/*-- CSS Image Text --*/
+.container {
+  position: relative;
+  max-width: 600px;     /* Maximum width */
+  margin: 0 auto;     /* Center it */
+  text-align: center;
+  color: #3f443f;
+  padding: 5px;   /* Some padding */
+}
+.container img {
+  vertical-align: middle;
+}
+
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/*-- End Css Image Text --*/
+
+/*--  Challenge 5-5  --*/
+/*-- Navigation Bar --*/
+
+ /*-- css  navigation bar -- */
+ .navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change background on mouse-over */
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+
+/* Main content */
+.main {
+  margin-top: 30px; /* Add a top margin to avoid content overlay */
+} 
+
+/* End  css navigation bar */
+
+/*-- Challenge 5-6 -- */
+/* using CSS to assign & styled two column layout */
+
+
+/* Create two equal columns that floats next to each other */
+.column {
+  background-color: #4c4040;
+  color: rgb(31, 29, 29);
+  box-sizing: border-box;
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* End  using CSS to assign & styled two column layout */
+
+/* -- Challenge 5-7 --*/
+
+/* using CSS  :hover selector,( create a hover effect for <p> elements)*/
+ p:hover {
+  background-color: #95958e;
+}
+/*-- End Css :hover selector for p elements --*/ 
+
+/*-- challenge 5-8 --*/
+/*--Using HTML and CSS, create an image overlay fade --*/
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.img {
+  display: block;
+  width: 50%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: auto;
+  width: 50%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.img {
+  opacity: 1;
+  display: block;
+  width: 50%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .img {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #04AA6D;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+ /*--challenge 5-9 -- */
+/*--html/css text over video--*/
+.video {
+  display: block;
+  width: 50%;
+  height: auto;
+}
+
+.video {
+  opacity: 1;
+  display: block;
+  width: 50%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.container:hover .video {
+  opacity: 0.3;
+}
