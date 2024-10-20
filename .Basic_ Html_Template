@@ -5,9 +5,7 @@
 	   <meta charset="utf-8">
    </head>
    <body>   
-      <header>
 	      <h3>The Basic HTML Template</h3>
 		  <p>Introduction to basic HTML syntax</p>
-	  </header>
    </body>
 </html>
