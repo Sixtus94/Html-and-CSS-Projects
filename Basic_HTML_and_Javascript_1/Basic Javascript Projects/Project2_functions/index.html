@@ -1,0 +1,56 @@
+
+<!--index.html-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+     <title>projects</title>
+     <meta charset="utf-8">
+     <script src="JS/Main.js"></script>
+  </head>
+
+  <body>
+   
+    <h1></h1>
+
+   <!--Two variables ids -->
+
+<p id="code1"></p>
+<p id="code2"></p>
+
+ <!--code here can not use carName-->
+ <p>Outside myFunction() carName is undefined.</p>
+
+<script>
+let text = "outside: " + typeof carName;
+document.getElementById("code1").innerHTML = text;
+
+
+function myFunction() {
+  let carName = "Benz";
+  let text = "inside: " + typeof carName + " " + carName; 
+  document.getElementById("code2").innerHTML = text;
+}
+
+myFunction();
+
+</script>
+
+
+<!--using += operator to concatenate a string-->
+<p id="concatenate"></p>
+
+<!--This paragraph call the JS function-->
+<p id = "concatenate" onclick = "myFunction()">click here!</p>
+  
+<script>
+  function myFunction() {
+  var sentence = "I am going to the gym,";
+  sentence += " for fitness exercise!";
+  document.getElementById("concatenate").innerHTML = sentence;
+}
+</script>
+
+  </body>
+</htm>

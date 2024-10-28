@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript html Events</h1>
+<h2>onclick</h2>
+
+<script>
+    function displayDate() {
+      document.getElementById("events").innerHTML = Date();
+    }
+    </script>
+    
+    <p>Click the button to display the date.</p>
+    <button onclick="displayDate()">The time is?</button>
+
+
+<p id="events"></p>
+
+<button onclick="this.innerHTML=Date()">The time is?</button>
+
+<!--Javascript changes the value of the src (source) attribute of an image-->
+
+<p id="myImg"></p>
+
+<button onclick="document.getElementById('myImg').src='JS/Img/pic_bulbon.jpg'">Turn on the light</button>
+
+<img id="myImg" src="JS/Img/pic_bulbon.jpg" style="width:100px">
+
+
+<button onclick="document.getElementById('myImg').src='JS/Img/pic_bulboff.jpg'">Turn off the light</button>
+
+
+
+
+
+</body>
+</html>
+ 
