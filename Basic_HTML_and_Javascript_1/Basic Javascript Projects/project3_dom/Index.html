@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Dom</title>
+    <meta charset="utf-8">
+    <script src="JS/Main.js"></script>
+</head>
+    <body>
+
+
+        <h1>Document Object Model</h1>
+        <h2>The getElementsByClassName() Method</h2>
+
+
+        <p>change the text of the text element with Class="Club":</p>
+
+          <!--The Groups class for the club-->
+        <div class="club">Club_A:</div>
+        <div class="club">Club_B:</div>
+
+        <script>
+          const collection = document.getElementsByClassName("club");
+          collection[0].innerHTML = "Club_A: Have 25 members!";
+        </script>
+
+
+<h2>The document.getElementsByName Method</h2>
+
+<p>First Name: <input name="fname" type="text" value=" "></p>
+<p>Second Name: <input name="fname" type="text" value=" "></p>
+
+<p>The tag name of the first element with the name "fname" is:</p>
+
+<p id="one"></p>
+
+<script>
+let elements = document.getElementsByName("fname");
+document.getElementById("one").innerHTML = elements[0].tagName;
+</script>
+
+<!-- NodeList "p"-->
+<h2>NodeList</h2>
+
+<p>Hello World!</p>
+
+<p>Hello,Jack!</p>
+
+<p>Are you coming!</p>
+
+<p id="node"></p>
+
+<script>
+const myNodelist = document.querySelectorAll("P");
+
+document.getElementById("node").innerHTML = "The innerHTML of the second paragraph is: "  + myNodelist[1]. innerHTML;
+
+
+document.getElementById("node").innerHTML = "This document contains " + myNodelist.length + " paragraphs.";
+
+</script>
+
+
+    </body>
+</html>

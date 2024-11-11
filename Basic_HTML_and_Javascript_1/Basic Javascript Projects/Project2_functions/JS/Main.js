@@ -19,7 +19,6 @@ function myFunction() {
 //This function use the += operator
 function myFunction() {
   var sentence = "I am going to the gym" + " "; //variable is created
-  sentence += "for fitness exercise "; //using the += operator to add to the variable
- //using document.getElementById() 
-
+  sentence += "for fitness exercise "; //using the += operator to add to the variable 
+  //using document.getElementById()
 }
