@@ -28,8 +28,7 @@ function division() { //Defining and naming the division function
 
 function random() {  //defining and naming the random function
 
-    document.getElementById("Ran").innerHTML = math.random()*
-        10; //print the result in html
+    document.getElementById("Ran").innerHTML = math.random() * 10; //print the result in html
      
 }
 
@@ -45,6 +44,7 @@ function Increment() {
 
 }
 
+
 function Decrement() {
     var value = document.getElementById("DecrementText").innerHTML; //saves the text of the HTML element to a variable
     value--; //subtract one from the value
@@ -53,5 +53,18 @@ function Decrement() {
 }
 
 
-    
+    //Unary Operator is an operator tha contain a single operand
+    function negation_operator() {
+        var x = 100;
+        document.getElementById("math").innerHTML = -x;
+
+    }
+
+
+    //Icrement and Decrement Operators
+    //Increment in Javascript is ++ & count one step up
+    function  negation_O() {
+    var x = 5;
+    document.getElementById("NegaOp"). innerHTML = +x;
+}
 
