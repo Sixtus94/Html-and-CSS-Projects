@@ -1,6 +1,8 @@
 
 //main.js
 
+// string method
+
 //The typeof Operator returns the type of a variable of an expression 
 document.write(typeof "Magnus");//print string
 document.write("<br>");
