@@ -1,0 +1,41 @@
+
+<!-- Index.html -->
+
+<!-- The return Statement -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>The return Statement</title>
+        <script src="JS/main.js"></script>
+    </head>
+<body>
+<!-- JavaScript Statements -->
+<h2>The return Statement</h2>
+
+<p>Call a function that performs a maths and return the result:</p>
+<p id="return"></p>
+<p id="nam"></p>
+
+<script>
+var x = myFunction(4, 3);
+
+function myFunction(a, b) {
+    return a * b;
+}
+
+document.getElementById("return").innerHTML = x;
+</script>
+
+<script>
+document.getElementById("nam").innerHTML = myName("Mr Lucky");
+
+function myName(name) {
+    return " Hello " + name;
+}
+
+</script>
+
+</body>
+</html>
