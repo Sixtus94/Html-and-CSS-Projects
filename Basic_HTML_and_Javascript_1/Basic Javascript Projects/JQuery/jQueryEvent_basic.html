@@ -1,0 +1,49 @@
+
+<!-- jQuery Event Basics -->
+
+<!doctype html>
+<html lang="en">
+<head>
+  <!--  Link to code.jquery.com file -->
+  <meta charset="utf-8">
+  <title>event.data</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</head>
+<body>
+  <!-- Index buttons -->
+<button> 0 </button>
+<button> 1 </button>
+<button> 2 </button>
+<button> 3 </button>
+<button> 4 </button>
+ 
+<div id="array"></div>
+ 
+<script>
+var arrayDiv = $( "#array" );
+for ( var i = 0; i < 5; i++ ) {
+  $( "button" ).eq( i ).on( "click", { value: i }, function( event ) {
+    var msgs = [
+      "button = " + $( this ).index(),
+      "event.data.value = " + event.data.value,
+      "i = " + i
+    ];
+    arrayDiv.append( msgs.join( ", " ) + "<br>" );
+  });
+}
+</script>
+<hr>
+
+<p>Hello</p>
+<a href="#">Click to hide me too</a>
+<p>Here is another paragraph</p>
+ 
+<script>
+$( "p" ).hide();
+$( "a" ).on( "click", function( event ) {
+  event.preventDefault();
+  $( this ).hide();
+});
+</script>
+</body>
+</html>
