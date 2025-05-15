@@ -41,10 +41,9 @@ A portfolio website showcasing my skills and experience as a web developer. This
 This README provides a clear overview of my portfolio project, its features, and technologies used. It also includes instructions for usage, as well as potential future improvements.
 
 # Projects
-
-- Pizza Menu
--Tic-Tac-Toe Game
--calculator
+.  Pizza Menu
+. Tic-Tac-Toe Game
+. calculator
 
 # Pizza Menu
 This project is a Menu used to order pizza with a various selection of toppings. It then takes the input information and calculates a price for the order
