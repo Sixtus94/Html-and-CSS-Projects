@@ -1,0 +1,68 @@
+<!-- xml challenge -->
+
+<!DOCTYPE html>
+<html>
+<body>
+<p id="XML_Example"></p>
+<script>
+var XML_parser, XML_Document;
+
+//creates a text string
+var hunter = "<hunter>" +
+"<title>Lion's the hunter</title>" +
+"<target>Became the hunted</target>" +
+"<prey>Buffalo fight back</prey>" +
+"<jungle>In The Jungle</jungle>" +
+"</hunter>";
+
+//Creates an XML DOM parser
+XML_parser = new DOMParser();
+
+//creates a new XML DOM object using the text string
+try{
+XML_Document = XML_parser.parseFromString(hunter,"text/xml");
+
+document.getElementById("XML_Example").innerHTML = XML_Document.getElementsByTagName("title")[0].childNodes[0].nodeValue;
+} catch (e) {
+    document.getElementById("XML_Example").innerHTML = "Error parsing XML: " + e.message;
+}
+</script>
+
+<p id="xml"></p>
+
+<script>
+var parser, xmlDoc;
+var text = "<bookstore><book>" +
+"<title>Love Bird</title>" +
+"<author>Dannister</author>" +
+"<year>2025</year>" +
+"</book></bookstore>";
+
+parser = new DOMParser();
+xmlDoc = parser.parseFromString(text,"text/xml");
+
+document.getElementById("xml").innerHTML =
+xmlDoc.getElementsByTagName("title")[0].childNodes[0].nodeValue;
+</script>
+
+
+<!-- xml note -->
+<note>
+    <to>Girlfriend</to><br>
+    <from>Mike, Your Boyfriend</from><br>
+    <heading>Reminder</heading><br>
+    <body>Don't forget we are spending time together this weekend!</body><br>
+  </note>
+ <br>
+
+  <note>
+  <date>2025-04-06</date><br>
+  <hour>08:30</hour><br>
+  <to>Dorcas</to><br>
+  <from>mike</from><br>
+  <body>Don't forget our date at palm view this weekend!</body><br>
+</note>
+  
+
+</body>
+</html>

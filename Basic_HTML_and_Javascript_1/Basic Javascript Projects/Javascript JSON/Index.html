@@ -1,0 +1,73 @@
+<!--JSON ( Javascript Object Notation )-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>json</title>
+</head>
+<body>
+    <!-- JSON.parse() Method-->
+  <p id="myDog"></p>
+
+  <script>
+    /*This is a JSON string variable */
+    var dog = '{"name": "Dax", "Breed": "Great Pyrenees", "color": "white"}';
+    /*convert JSON strings to javascript objects*/
+    var JSONstring = JSON.parse(dog);
+    document.getElementById("myDog").innerHTML = JSONstring.name + " the " + JSONstring.Breed;
+  </script>
+
+  <!-- localStorage() Method -->
+   <p id="my_Dog"></p>
+
+ <script>
+    /*set the as a key/value pair to be saved localy in your browser */
+    localStorage.setItem("Name", "Dax");
+    /*then use the key "Name" to return its value "Dax"*/
+    document.getElementById("my_Dog").innerHTML = localStorage.getItem("Name");
+ </script>
+
+ <!-- localStorage() Method Assignment -->
+ <h4>The Window Object</h4><!-- Either window. localStorage or just localStorage-->
+ <p>The localStorage Property:</p>
+ <p>Saved name is:</p>
+ <p id="name"></p>
+ 
+ <script>
+ // Set Item
+ localStorage.setItem("lastname", "mike");
+ // Retrieve
+ document.getElementById("name").innerHTML = localStorage.getItem("lastname");
+
+ //Save Data to Local Storage
+//localStorage.setItem(key, value);
+//Remove Data from Local Storage
+//localStorage.removeItem(key);
+//Remove All (Clear Local Storage)
+//localStorage.clear();
+ </script>
+
+<p><button onclick="clickCounter()" type="button">Click me!</button></p>
+
+<p>Number of clicks: <span id="counter"></span></p>
+
+<p>Click the button to see the counter increase.</p>
+<p>Close the browser tab (or window), and try again, and the counter will continue to count (is not reset).</p>
+
+<script>
+document.getElementById("counter").innerHTML = localStorage.clickcount;
+
+function clickCounter() {
+  if (localStorage.clickcount) {
+    localStorage.clickcount = Number(localStorage.clickcount)+1;
+  } else {
+    localStorage.clickcount = 1;
+  }
+document.getElementById("counter").innerHTML = localStorage.clickcount;
+}
+</script>
+</body>
+</html>
+
+

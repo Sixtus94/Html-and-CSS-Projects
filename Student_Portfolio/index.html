@@ -1,122 +1,191 @@
 <!DOCTYPE html>
 <html>
     <!--head-->
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width" />
-        <title>portfolio website</title>
-        <link rel="stylesheet" type="text/css" href="./CSS/portfolio.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+    <title>Portfolio Project</title>
+    <link rel=" short cut" type="img/jpg" href="images/coding_icon.png">
+    <link rel="stylesheet" type="text/css" href="./CSS/portfolio.css">
+</head>
 
-    <!--Body-->
-    <body class="background">
+<!--Body-->
+<body class="Background">
 
-        <!-- Navbar -->
-         <div class="Navbar">
-            <a class="active" href="#Home">Home</a>
-            <a href="#About">About</a>
-            <a href="#GitHub">GitHub</a>
-            <a href="#Contact">Contact</a>
-         </div>
+    <!-- Navbar -->
+    <div class="Navbar">
+        <a class="active" href="#Home">Home</a>
+        <!-- Head section added-->
+        <a href="#Slideshow">Slideshow</a>
+        <a href="#About">About</a>
+        <a href="#GitHub">GitHub</a>
+        <!-- Onclick and ondblick functions added to open and close the contact form -->
+        <a onclick="openForm()"
+        ondblclick="closeForm()"
+        class="contact">Contact</a>
+    </div>
 
-         <!--Breaks inserted to add space between navbar and the first heading-->
-         <br>
-         <br>
+    <!-- Background video-->
+    <div id="Home">
+        <video autoplay muted loop id="Typing_Video">
+          <source src="./CSS/img/Typing_video.mp4" type="video/mp4">
+          <!--Display message if video fails to run-->
+          Your browser does not support HTML5 video.
+        </video>
+    </div>
 
-         <!-- Background video-->
-          <div id="Home">
-            <video autoplay muted loop id="Typing_Video">
-                   <source src="./CSS/Img/Typing_video.mp4" type="video/mp4">
-                   <!--Display message if video fails to run-->
-                 Your browser does not support HTML5 video.
-            </video>
-          </div>
+    <!-- video text-->
+    <div class="Video_Text">
+        <h1 class="white-text">Sixtus Ameh's portfolio</h1>
+        <strong>
+          <p class="center">
+             <q>The computer programmer is a creator of universes for which he alone is the lawgiver.
+                <br>No playwright, no emperor, no stage director, however powerful, has ever exercised such absolute authority to arrange a stage or
+                <br>field of battle and to command such unswervingly dutiful actors or troops.
+          </q>
+           <br> -Joseph Weizenbaum<br>
+           <br>
+           My name is Sixtus Ameh. Welcome to my portfolio website. On it, I will tell you about my background and experience.
+           <br>
+           <br>Thank you for stopping by and enjoy! 
+        </p>
+     </strong>
+  </div>
 
-          <!-- video text-->
-           <div class="Video_Text">
-                <h1 class="white-text">sixtus Ameh's portfolio</h1>
-                <strong>
-                     <p class="center">
-                        <q>Software are computer programs-sets of instructions that tell a computer what to do.
-                            <br> Software is created by people to make the computer perform certain functions and achieve a certain output.
-                            <br>
-                            Programs are written in a programming language(an organized system of words, phrases and smbols that let you create programs, there are different types of programming languages.)
-                            <br>"software is a great combination between artistry and engineering".
-                        </q>
-                        <br>-Bill Gates 1955.
-                        <br>
-                        <br> My name is sixtus Ameh. Welcome to my portfolio website. On it, I will tell you about my background and experience.
-                        <br>
-                        <br> Thank you for stopping by and enjoy!
-                     </p>
-                </strong>
-           </div>
-
-           <!-- About section-->
-           <div class="Row" id="About">
-            <!-- Left column -->
-            <div class="Column_2">
-                         <img src="./CSS/Img/code1.png" alt=" ">
-                 </div>
-                   <!-- Right column -->
-                   <div class="Column_1">
-                        <h1>About</h1>
-                        <P> I am a software developer who loves to code!. I enjoy time out with friends and I love adventure.
-                            <br>  
-                            <br>I am a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>’s Software Developer Boot Camp, and I trained with experienced in the following web and programming languages: HTML, CSS, JavaScript, SQL, C# and more. 
-                            <br>
-                            <br>
-                            I am a full-stack developer and would love to work with you on your project.
-                            Entering my first job, I aim to gain hands- on experience through challenging projects that utilize my skills. I will actively learn from experienced professionals and improve my technical skills through ongoing learning and participation in software developer boot Camp, other programming languages mentions above and more<a href="#Contact">Contact</a> me below! 
-                      </P>
-                 </div> 
+    <!-- Slideshow section -->
+    <div id="Slideshow">
+        <div id="Slideshow_Background">
+           <div id="Slideshow_Container">
+              <!-- Slide 1 of 6 -->
+              <div class="mySlides fade">
+                <img class="Slideshow_Images" 
+                  src="./CSS/Img/My_picture.jpg" alt="My_picture">
+                  <div class="text">I'm available to assist you on your project!</div>
+             </div>
+            <!-- Slide 2 of 6 -->
+            <div class="mySlides fade">
+            <img class="Slideshow_Images"
+              src="./CSS/Img/HTML_CSS_and_JavaScript.jpg" alt="HTML, CSS and JS logos">
+                <div class="text">I am a full-stack software developer,<br> trained in:<br>HTML, CSS, JavaScript,</div>
+    </div>
+    <!-- Slide 3 of 6-->
+    <div class="mySlides fade">
+         <img 
+          class="Slideshow_Images"
+          src="./CSS/Img/Python.png"
+          alt="Python logo">
+         <div class="text">The popular programming language Python,</div>
+    </div>
+    <!-- Slide 4 of 6 -->
+    <div class="mySlides fade">
+        <img 
+         class="Slideshow_Images"
+          src="./CSS/Img/C_Sharp_and_Dot_NET(1).png" alt="C# logo">
+        <div class="text">C#, . NET Framework, ASP.NET, MVC,</div>
+    </div>
+        <!-- Slide 5 of 6 -->
+        <div class="mySlides fade">
+          <img class="Slideshow_Images"
+           src="./CSS/Img/SQL_and_Database(1).jpg" alt="SQL logo">
+        <div class="text">back end development, databases and SQL.</div>
+    </div>
+           <!-- Slide 6 of 6 -->
+           <div class="mySlides fade">
+                <img 
+                class="Slideshow_Images"
+                src="./CSS/Img/coding_icon.png" alt=" ">
+                  <div class="text"><a    class="white-text contact"onclick="openForm()">Contact me now!</a></div>
             </div>
-
-            <!-- GitHub section-->
-             <div class="Row" id="GitHub">
-                <!-- left column -->
-                 <div class="Column_1">
-                    <h1>GitHub</h1>
-                    <p>
-                        You can view my coding projects on my GitHub profile here:
-                        <br>
-                        <p class="center"><a href="https://github.com/Sixtus94/Html-and-CSS-Projects" target="_blank">Sixtus94 Github projects</a></p>  
-                    </p>
-                 </div>
-                  <!--Right column-->
-            <div class="Column_2">
-                <a href="https://https://github.com/Sixtus94/Html-and-CSS-Projects" target="_blank"><img src="./CSS/Img/GitHub.png" alt="GitHub Logo"></a>
-            </div>
-          </div>
-
-          <!--Contact section-->
-        <div class="Row" id="Contact">
-            <!--Contact image, left column-->
-            <div class="Column_2 Column_tall">
-                <img src="./CSS/Img/Contact_image.png" alt="Contact image">
-            </div>
-            <!--Contact form, right column-->     
-            <div class="Column_1 Column_tall">
-                <h1>Contact</h1>
-                <!--This specifies where and how to send the form data; we are leaving it blank-->
-                <form action="https://formspree.io/f/mvgprbqd" method="POST"> <!-- Here we are utilizing a 3rd party service to submit the contact form data, insert your formspree endpoint in the action attribute -->
-                    <label>Name:</label>
-                        <input type="text" placeholder="Please enter your name here">
-                    <label>Email:</label>
-                        <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
-                    <label>Message:</label>
-                        <input type="text" id="Message" name="Message" placeholder="Please write your message here">
-                        <input type="submit" value="SUBMIT">
-                </form>
-            </div>
+            <!-- Previous and next buttons -->
+             <a class="Previous"
+             onclick="plusSlides(-1)">&#10094;</a>
+             <a class="Next"
+             onclick="plusSlides(1)">&#10095;</a>
         </div>
+        <br> 
+         <!-- This is to space the Slideshow images and the dots -->
 
-        <!--Footer section-->
-        <footer>
-            <p>
-                <p class="center">&copy Prosper Consulting Inc., <a href="https://www.learncodinganywhere.com/" target="_blank">The Tech Academy</a></p>
-                <br>
-            </p>
-        </footer>
+           <!-- Slideshow dots ( This is another way for the users to navigate through the slideshow ) -->
+            <div style="text-align: center">
+                  <span class="dot" onclick="currentSlide(1)"></span>
+                  <span class="dot"    onclick="currentSlide(2)"></span>
+                  <span class="dot" onclick="currentSlide(3)"></span> 
+                  <span class="dot" onclick="currentSlide(4)"></span> 
+                  <span class="dot" onclick="currentSlide(5)"></span> 
+                  <span class="dot" onclick="currentSlide(6)"></span> 
+              </div>
+           </div>
+      </div>
+
+      <!-- About section-->
+      <div class="Row" id="About">
+        <!-- Left column -->
+        <div class="Column_2">
+            <img src="./CSS/img/code1.png" alt="coding equipmentS">
+        </div>
+        <!-- Right column -->
+        <div class="Column_1">
+             <h1>About</h1>
+               <P>I am a software developer who loves to code!. I enjoy time out with family and friends and I love adventure.
+            <br>  
+            <br>I am a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech  Academy</a>’s Software Developer Boot Camp, and I trained with experienced in the following web and programming languages: HTML, CSS, JavaScript, SQL, C# and more. 
+            <br>
+            <br>I am a full-stack developer and would love to   work with you on your project.
+             Entering my first job, I aim to gain hands- on experience through challenging projects that utilize my skills.<a onclick="openForm()"class="contact">Contact</a> me below! 
+        </P>
+     </div> 
+  </div>
+
+<!-- GitHub section-->
+<div class="Row" id="GitHub">
+    <!-- left column -->
+       <div class="Column_1">
+            <h1>GitHub</h1>
+        <p>You can view my coding projects on my GitHub profile here:
+        <br>
+        <p class="center"><a href="https://github.com/Sixtus94/Html-and-CSS-Projects" target="_blank">Sixtus94 Github projects</a></p>  
+        </p>
+        <p>Linkedin Link:
+        <p class="center"><a href="https://www.linkedin.com/in/sixtus-ameh-8b708811a?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BNKFkquBbQzGYyHEkiZ6JGg%3D%3D" target="_blank">Linkedin</a></p>
+        </p>
+     </div>
+    <!--Right column-->
+    <div class="Column_2">
+        <a href="https://https://github.com/Sixtus94/Html-and-CSS-Projects" target="_blank"><img src="./CSS/Img/GitHub.png" alt="GitHub Logo"></a>
+    </div>
+</div>
+
+<!--Contact form section-->
+<div id="Contact">
+    <button onclick="openForm()"
+        class="Pop_Up_Button">CONTACT</button>
+         <div class="form-popup" id="myForm">
+               <form action="https://formspree.io/info@learncodinganywhere.com" method="POST" class="form-container">  <!-- Here I MA using a free online service from https://formspree.io/ to send contact form to an email address. It will not run until i push it to live, on the internet (My hosting server). -->
+                <h1>Contact</h1>
+                <label for="name"><b>Name</b></label>
+                <input type="text" placeholder="Type your name here" name="name" required>
+                <label for="phone"><b>phone</b></label>
+                <input type="text" placeholder="Type your phone number here" name="phone">
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Type Your email address here" name="email" required>
+                <label 
+                for="message"><b>Message</b></label>
+                <input type="text"
+                placeholder="Type your message here"
+                name="message">
+                <button type="submit"
+                class="btn">SUBMIT</button>
+                <button type="button"
+                class="btn cancel"
+                ondblclick="closeForm()">CLOSE</button>
+            </form>
+        </div>
+    </div>
+
+    <!--Footer section-->
+    <footer>
+        <p class="center">&copy Prosper Consulting Inc., <a href="https://www.learncodinganywhere.com/" target="_blank">The Tech Academy</a></p><br>
+    </footer>
+        <script src="JS/Portfolio.js"></script>
     </body>
 </html>

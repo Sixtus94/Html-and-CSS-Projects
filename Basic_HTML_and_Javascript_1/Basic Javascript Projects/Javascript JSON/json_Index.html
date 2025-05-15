@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Creating JSON string from a JavaScript object.</h2>
+
+<p id="json"></p>
+
+<script>
+//Receiving JSON:
+// myJSON is text received in JSON format.
+// Convert JSON into a JavaScript object:
+var obj = { "name":"Kelly", "age":21, "city":"Cork"};
+var myJSON = JSON.stringify(obj);
+document.getElementById("json").innerHTML = myJSON;
+</script>
+<br>
+<h2>Store and retrieve data from local storage.</h2>
+
+<p id="data"></p>
+
+<script>
+var myObj, myJSON, text, obj;
+
+//Storing data:
+myObj = { "name":"Dorcas", "age":30, "city":"Califonia" };
+myJSON = JSON.stringify(myObj);
+localStorage.setItem("local_storage", myJSON);
+
+//Retrieving data:
+text = localStorage.getItem("local_storage");
+obj = JSON.parse(text);
+document.getElementById("data").innerHTML = obj.name;
+</script>
+
+<h3>JSON parse()</h3>
+<!--JSON.parse() parses a string, written in JSON format, and returns a JavaScript object.-->
+<p>The value of "firstName" is:</p>
+<p id="parse"></p>
+<script>
+var obj = JSON.parse('{"firstName":"Lumba", "lastName":"Maxwel"}');
+document.getElementById("parse").innerHTML = obj.firstName;
+</script>
+
+<h3>Using the <em>reviver</em> Function</h3>
+<p>Uppercase the value of "city":</p>
+<p id="value"></p>
+<script>
+var text = '{ "name":"Joan", "age":"32", "city":"killarney"}';
+var obj = JSON.parse(text, function (key, value) {
+  if (key == "city") {
+    return value.toUpperCase();
+  } else {
+    return value;
+  }
+});
+document.getElementById("value").innerHTML = obj.name + ", " + obj.city; 
+</script>
+
+<h2>Use XMLHttpRequest to get the content of a file.</h2>
+<!--The content is written in JSON format, and can easily be converted into a JavaScript object.-->
+<p id="json"></p>
+
+<script>
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    var myObj = JSON.parse(this.responseText);
+    document.getElementById("json").innerHTML = myObj.name;
+  }
+};
+xmlhttp.open("GET", "json_file.txt", true);
+xmlhttp.send();
+</script>
+
+<p>Take a look at <a href="../js/json_file.txt" target="_blank">json_demo.txt</a></p>
+
+
+</body>
+</html>
