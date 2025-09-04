@@ -1,0 +1,53 @@
+<!-- Simple Auto-Playing Slideshow -->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Automatic Slideshow</title>
+<link rel="stylesheet" href="./CSS/style.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+ <style>
+#slideshow {
+  margin: 80px auto;
+  position: relative;
+  width: 240px;
+  height: 240px;
+  padding: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+#slideshow > div {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+} 
+    </style>
+</head>
+ <body>
+ <div id="slideshow">
+   <div>
+     <img src="https://assets.codepen.io/9632/dog.jpg">
+    </div>
+ <div>
+    <img src="https://assets.codepen.io/9632/plant.jpg">
+ </div>
+    <div>
+      Great! This slide proof content can be anything.
+    </div>
+   </div>
+<script>
+ $("#slideshow > div:gt(0)").hide();
+
+setInterval(function() {
+  $('#slideshow > div:first')
+    .fadeOut(1000)
+    .next()
+    .fadeIn(1000)
+    .end()
+    .appendTo('#slideshow');
+}, 3000);
+   </script>
+  </body>
+ </html>

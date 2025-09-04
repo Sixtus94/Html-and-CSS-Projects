@@ -1,0 +1,53 @@
+
+<!-- HTML script tag -->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The script tag element</h1>
+<p id="script"></p>
+
+<script>
+document.getElementById("script").innerHTML = "Hello JavaScript!";
+</script>
+<hr>
+<!-- The some() Method -->
+<h3>JavaScript Arrays</h3>
+<h4>The some() Method One</h4>
+
+<p>The some() method checks if some array values pass a test:</p
+  >
+<p id="some()_method"></p>
+
+<!-- Inline Javascript -->
+<script>
+var numbers = [35, 5, 10, 16, 25];
+var someOver15 = numbers.some(myFunction);
+
+document.getElementById("some()_method").innerHTML = "Some over 15 is " + someOver15;
+
+function myFunction(value, index, array) {
+  return value > 15;
+}
+</script>
+<hr>
+
+ <!-- Array .some() method -->
+  <h4>Array .some() method Two</h4>
+  <p id='displayAge'></p>
+
+  <script>
+    var ages = [2, 10, 18, 20, 13, 15, 30];
+
+    //Using the arrow function to pass in parameter of age.
+    checkAge = (age) => age >= 18;
+
+    function ageFunction() {
+      //using the .some() to iterate through the array of ages and display the result.
+      document.getElementById('displayAge').innerHTML = ages.some(checkAge);
+    }
+  </script>
+  
+</body>
+</html>

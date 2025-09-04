@@ -1,0 +1,20 @@
+
+
+ body
+  p  {
+     color:white;
+	 background:darkred;
+	 font-weight:bold;
+	 text-align:center;
+	 font-size:medium;
+}
+
+ h2 {
+      text-shadow:2px 2px 5px #49D049;
+	 
+}
+  h3 {
+     text-shadow:0px 0px 10px 0000FF;
+	 text-decoration:underline;
+ }
+     	 

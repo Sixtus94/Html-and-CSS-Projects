@@ -1,0 +1,33 @@
+<!-- Ondbclick() Event Handler -->
+<!DOCTYPE html>
+<html>
+<body>
+<h1>HTML DOM Events</h1>
+<h2>The ondblclick Event</h2>
+
+<p ondblclick="ondblclick_Function()">Double-click this paragraph to trigger a function.</p>
+
+<p id="event_handler"></p>
+<hr>
+<p id="Double-click">Double-click me.</p>
+
+<script>
+function ondblclick_Function() {
+  document.getElementById("event_handler").innerHTML += "This is my challenge ";
+}
+</script>
+
+
+
+
+<script>
+    document.getElementById("Double-click").ondblclick = function() {myFunction()};
+    
+    function myFunction() {
+      document.getElementById("Double-click").innerHTML = "I was double-clicked!";
+    }
+    </script>
+    
+
+</body>
+</html>

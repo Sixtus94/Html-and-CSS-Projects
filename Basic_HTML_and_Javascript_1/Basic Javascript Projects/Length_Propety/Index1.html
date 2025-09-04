@@ -1,0 +1,29 @@
+<!-- index1.html -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+<body>
+<!-- The HTMLCollection Object -->
+
+<h2>The length Property</h2>
+
+<p>Click "Change" to change all elements with class="myclass":</p>
+<button onclick="myFunction()">Change</button>
+
+<p>I am a paragraph.</p>
+<p class="myclass">I am a paragraph.</p>
+<p class="myclass">I am a paragraph.</p>
+
+<script>
+function myFunction() {
+  var collection = document.getElementsByClassName("myclass");
+  for (let i = 0; i < collection.length; i++) {
+    collection[i].style.fontSize = "24px";
+  }
+}
+</script>
+</body>
+</html>

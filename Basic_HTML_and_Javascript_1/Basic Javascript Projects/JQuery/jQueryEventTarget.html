@@ -1,0 +1,64 @@
+<!-- jQuery Event Target -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>event.target</title>
+  <!-- css is used to style the span, strong & p element-->
+  <style>
+  span, strong, p {
+    padding: 8px;
+    display: block;
+    border: 1px solid #999;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</head>
+<body>
+ 
+<div id="log"></div>
+<div>
+  <p>
+    <strong><span>click</span></strong>
+  </p>
+</div>
+ 
+<script>
+$( "body" ).on( "click", function( event ) {
+  $( "#log" ).html( "clicked: " + event.target.nodeName );
+});
+</script>
+
+<br>
+<!-- JQuery Event Basic -->
+<div id="click">
+<ul>
+  <li>item 1
+    <ul>
+      <li>sub item 1-a</li>
+      <li>sub item 1-b</li>
+    </ul>
+  </li>
+  <li>item 2
+    <ul>
+      <li>sub item 2-a</li>
+      <li>sub item 2-b</li>
+    </ul>
+  </li>
+</ul>
+</div>
+ 
+<script>
+    //The click handler is added to an unordered list and the 
+    //childern of its li children are hidden. Clicking one the
+    //li children toggle() their children 
+function handler( event ) {
+  var target = $( event.target );
+  if ( target.is( "li" ) ) {
+    target.children().toggle();
+  }
+}
+$( "ul" ).on( "click", handler ).find( "ul" ).hide();
+</script>
+</body>
+</html>

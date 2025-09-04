@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html onload="document.body.style.opacity='1'">
+<head>
+    <style>
+        html {
+            background-color: black;
+        }
+        body {
+            opacity: 1;
+            transition: 1s opacity;
+        }
+        div {
+            opacity: 0;
+            transition: 2s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <b>fade-in effect on page load using CSS</b>
+    <p>This page will fade in after loading</p>
+   <br>
+
+   <div class="fade-in-container">
+      <!-- Your content here -->
+      <h1>Welcome to my webpage!</h1>
+      <p>This is a sample fade-in effect.</p>
+    </div>
+
+<script>
+    document.body.classList.add('fade-out');
+    window.addEventListener('DOMContentLoaded', () => {
+        document.body.classList.remove('fade-out');
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+
+<!-- Arrow_Function -->
+ <!DOCTYPE html>
+ <html>
+    <head>
+        <title>Arrow_Function</title>
+        <meta charset="UTF-8" >
+
+    </head>
+    <body>
+        <h4>JavaScript Functions</h4>
+        <h5>The Arrow Function</h5>
+
+        <p>This shows the syntax of an Arrow Function, and how to use it.</p>
+
+        <p id="Arrow"></p>
+
+        <script>
+        var myFunction = (x, y) => x * y;
+        document.getElementById("Arrow").innerHTML = myFunction(4, 5);
+       </script> <br>
+
+      
+      <!-- Before Arrow:-->
+        <h4>without_arrow</h4>
+        <p>This shows the syntax of a function, without the use of arrow function syntax.</p>
+
+        <p id="without_arrow"></p>
+
+      <script>
+         var hello = "";
+
+         hello = function() {
+        return "Hello World!";
+    }
+
+        document.getElementById("without_arrow").innerHTML = hello();
+       </script>
+
+       <!-- With Arrow Function -->
+        <h3>With Arrow Function</h3>
+       <p id="Arrow_Function"></p>
+
+       <script>
+       var hello = "";
+       
+       hello = () => {
+         return "Hello World!";
+       }
+       
+       document.getElementById("ArrowFunction").innerHTML = hello();
+       </script>
+
+        <!-- Passing in a parameter with arrow Function -->
+          <p id="displaycar"></p>
+
+          <script>
+            var car;
+            car = (val) => "These are my favorite car brands: " + val;
+            document.getElementById('displaycar').innerHTML = car("Honda, Ford, and Nissan");
+          </script>
+          
+          <br>
+          <!-- Function With a parameter -->
+          <p>An Arrow Function with a parameter.</p>
+
+          <p id="call"></p>
+          
+          <script>
+          var hello = "";
+          
+          hello = (val) => "Hello " + val;
+          
+          document.getElementById("call").innerHTML = hello("Universe!");
+          </script>
+    </body>
+ </html>

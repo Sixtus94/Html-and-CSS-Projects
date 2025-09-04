@@ -1,0 +1,119 @@
+
+<!-- index.html -->
+
+
+<!-- Loops Assignment -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="utf-8"  />
+      <title>Project10_loops_array</title>
+      <script src="JS/main.js" defer></script>
+</head>
+<body>
+
+<!-- While Loop function -->
+<h4>Count Numbers To 15 In Loop:</h4>
+<p id="Loop_to_fifteen"></p>
+<button onclick="count_15_Loop()">Click here to execute the Loop</button>
+<hr />
+
+<!-- For Loop function -->
+<h4>For Loop:</h4>
+<button onclick="for_Loop()">click here.</button>
+<p id="List_of_Instruments"></p>
+<hr />
+
+       
+<!-- Array functions -->
+<h4>Arrays and Objects</h4>
+<!-- An array of cat pictures  -->
+<button onclick="array_Function()">click Array!.</button>
+<p id="Array"></p>
+<br>
+
+<!-- A function with an array(2) Break_Fast_menu -->
+<button onclick="breakFast_array()">Array of Break Fast Menu</button>
+<p id="Array_menu"></p>
+<hr />
+
+<!-- Const -->
+<h4>Const Keyword Assignment</h4>
+<button onclick="constant_function()">click here</button>
+<p id="constant"></p>
+<hr />
+         
+<!-- Creating an Object using let  -->
+<h4>Object: Car</h4>
+<p>An object with the let Keyword</p>
+<button onclick="car()">click Me!</button>
+<p id="car_object"></p>
+<hr />
+
+
+
+<script>
+// Let Keyword
+     var x = 82;
+     document.write(x);
+     {
+      let x = 33;
+      document.write("<br>" + x);
+     }
+     document.write("<br>" + x);
+     // The output:82, 33 and 82, While 
+     
+
+     var x = 82;
+     document.write(x);
+     {
+       var x = 33;
+       document.write("<br>" + x);
+
+     }
+     document.write("<br>" + x);
+     </script>
+     <hr />
+
+     <!-- Scopes -->
+      <h4>Scopes</h4>
+      <p>Global Scope,<br> Function Scope<br> Block Scope</p>
+      <script>
+            // Global Scope
+            var A = 30;
+            document.write(A);
+
+            myFunction();
+
+            // Function Scope
+            function myFunction() {
+                  var B = 10;
+                  document.getElementById("function_scope").innerHTML = B;
+                  
+                  // Block Scope
+                  if (B > 5) {
+                        let C = 20;
+                        const D = 30;
+                        document.getElementById("block_scope").innerHTML = C + D;
+                  }
+            }
+            // Global Scope: The variable "A" would be able to be accessed from anywhere in the program.
+
+            // Function Scope: The variable "A" would only be accessed from within the function - not outside.
+
+            // Block Scope: The variables "C" and "D" could only be accessed within the if statement. An attempt to perform an operation on the variables C and D outside of the if statement's curly brackets, it wouldn't execute.
+       </script>
+       <hr />
+
+       <!-- Break and the continue statement -->
+           <h4>Javascript Loops</h4>
+           <p><b>Break and continue statement</b></p>
+          <p> The <b>continue</b> statement breaks one iteration (in the loop), if a specified condition occurs, and continues with the next iteration in the Loop <br> A loop with a <b>continue</b> statement.</p>
+          <p>This loop will skip the step where i = 5 and continue with step i = 6.</p>
+          <p id="break_continue"></p>
+
+          
+
+    </body>
+</html>

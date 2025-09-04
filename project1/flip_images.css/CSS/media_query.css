@@ -1,0 +1,30 @@
+/*--- css media Query challenge --*/
+
+/* The syntax for media Query-- @media mediatype and (expressions) {
+          css code; 
+
+} --*/
+ html {
+    background-color: tan;
+    color: blue;
+ }
+
+ /* On screens that are 600px or less, set the background color to red */
+  @media screen and (max-width: 600px)  {
+    html {
+       background-color: red;
+       color: azure;
+      border: 1px solid #d4d4d4;
+      border-radius: 4px;
+      list-style-type: none;
+      margin: 4px;
+      padding: 2p
+    }
+  }
+ /* On screens that are 992pxx or less, set the background color to olivedrab */
+  @media screen and (max-width: 992px) {
+  html {
+    background: olivedrab;
+    color: azure;
+   }
+}

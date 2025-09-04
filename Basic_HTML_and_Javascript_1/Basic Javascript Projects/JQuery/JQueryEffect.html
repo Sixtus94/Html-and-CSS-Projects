@@ -1,0 +1,73 @@
+<!-- jQuery Introduction to Effect -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>show Effect Slowly</title>
+  <style>
+  p {
+    background: #ff00d9;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</head>
+<body>
+ 
+<button>Show Effect</button>
+<p style="display: none">Hello! jQuery</p>
+ 
+<script>
+$( "button" ).on( "click", function() {
+  $( "p" ).show( "slow" );
+});
+</script>
+<br>
+<!-- jQuery Image Effect -->
+
+<div id="clickme">
+    Click here
+  </div>
+  <img id="flower" src="./CSS/Img/flower.png" alt="" width="100" height="123"
+    style="position: relative; left: 10px;">
+
+ <script>
+$( "#clickme" ).on( "click", function() {
+  $( "#flower" ).animate({
+    opacity: 0.25,
+    left: "+=50",
+    height: "toggle"
+  }, 5000, function() {
+    // Animation complete.
+  });
+});
+
+//simultanously animate the width and heigt with the swing
+//function and the opacity with linear easying function
+$( "#clickme" ).on( "click", function() {
+  $( "#flower" ).animate({ // The animation effect toggle with swing 
+    width: [ "toggle", "swing" ],
+    height: [ "toggle", "swing" ],
+    opacity: "toggle"
+  }, 5000, "linear", function() {
+    $( this ).after( "<div>Animation complete.</div>" );
+  });
+});
+//Click function to toggle the image flower width and height
+$( "#clickme" ).on( "click", function() {
+  $( "#flower" ).animate({
+    width: "toggle",
+    height: "toggle"
+  }, {
+    duration: 5000,
+    specialEasing: {
+      width: "linear",
+      height: "easeOutBounce"
+    },
+    complete: function() {
+      $( this ).after( "<div>Animation complete.</div>" );
+    }
+  });
+});
+ </script>
+</body>
+</html>

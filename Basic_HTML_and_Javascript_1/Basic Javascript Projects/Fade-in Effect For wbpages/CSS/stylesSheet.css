@@ -1,0 +1,18 @@
+/*Fade Challenge*/
+/*A Clean Fade-in-Effect for Webpages*/
+
+/*Two very simple styles for the body */
+
+html {
+    background-color: black;
+}
+
+body {
+    opacity: 1;
+    transition: 1s opacity;
+}
+
+body.fade-out {
+    opacity: 0;
+    transition: none;
+}

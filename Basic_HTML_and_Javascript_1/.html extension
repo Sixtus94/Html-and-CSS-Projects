@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>visual world</title>
+</head>
+<style>
+    body {
+        color: #6365b3;
+    }
+</style>
+<body>
+    <p>welcome to visual reality world, where color of an element's is hexadecimal number</p>
+</body>
+</html>

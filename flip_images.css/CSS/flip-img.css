@@ -1,0 +1,83 @@
+/*--The css to flip image--*/
+
+img {
+    /* flip horizontally */
+    transform: scaleX(-1);
+}
+
+img {
+    /* flip vertically */
+    transform: scaleY(-1);
+}
+
+img {
+    /* flip both */
+    transform: scale(-1, -1);
+}
+
+  /*-- Alternatively you can use rotateX and rotateY  --*/
+
+img {
+    /* flip horizontally */
+    transform: rotateY(180deg);
+}
+
+img {
+    /* flip vertically */
+    transform: rotateX(180deg);
+}
+
+img {
+    /* flip both */
+    transform: rotateX(180deg) rotateY(180deg);
+}
+
+@keyframes flip-with-scale {
+    0% {
+        transform: perspective(400px) scaleX(1);
+    }
+
+    100% {
+        transform: perspective(400px) scaleX(-1);
+    }
+}
+
+@keyframes flip-with-rotate {
+    0% {
+        transform: perspective(400px) rotateY(0);
+    }
+
+    100% {
+        transform: perspective(400px) rotateY(180deg);
+    }
+}
+
+.rose {
+    background-image: url(/images/rose.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-left: 5em;
+}
+
+.rose-flipped {
+    transform: scaleX(-1);
+}
+
+.rose {
+    display: flex;
+    width: 15em;
+}
+
+/* create our pseudo element */
+.rose-flipped::before {
+    content: '';
+    background-image: url(./css/img/flips_original.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 5em;
+}
+
+/* flip our pseudo element */
+.rose-flipped::before {
+    transform: scaleX(-1);
+}
